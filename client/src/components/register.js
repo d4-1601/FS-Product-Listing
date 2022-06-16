@@ -31,7 +31,7 @@ export function Register() {
         <input type='text' placeholder='Name' value={username} onChange={(e) => setUsername(e.target.value)} />
         <input type='text' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
         <input type='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
-        <input type='submit' />
+        <button type='submit' onClick={() => history.push('/login')}/>
     </form>
     </>
   )
