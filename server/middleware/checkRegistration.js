@@ -31,6 +31,6 @@ checkUsernameOrEmail = (req, res, next) => {
     });
 };
 
-const checkRegistration = { checkDuplicateUsernameOrEmail: checkDuplicateUsernameOrEmail };
+const checkRegistration = { checkUsernameOrEmail: checkUsernameOrEmail };
 
 module.exports = checkRegistration;

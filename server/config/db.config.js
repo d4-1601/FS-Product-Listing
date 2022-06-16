@@ -4,7 +4,7 @@ module.exports = {
   USER: process.env.DB_USER,
   PASSWORD: process.env.DB_PASSWORD,
   DATABASE: process.env.DB_NAME,
-  dialect: "postgres",
+  dialect: 'postgres',
   pool: {
     max: 5,
     min: 0,
