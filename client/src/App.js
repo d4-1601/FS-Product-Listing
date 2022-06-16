@@ -5,6 +5,7 @@ import {
   Route
 } from 'react-router-dom';
 import { Register } from './components/register';
+import { Login } from './components/login';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route path="/register" component={Register} />
-          <Route />
+          <Route path="/login" component={Login}/>
         </Switch>
       </BrowserRouter>
     </>

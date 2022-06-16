@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
-import axios from "axios";
+import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
 export function Register() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [msg, setMsg] = useState('');
 
   const history = useHistory();
 
@@ -19,11 +18,9 @@ export function Register() {
         email: email,
         password: password
       });
-      history.push("/login");
+      history.push('/login');
     } catch (error) {
-      if (error.response) {
-        setMsg(error.response.data.msg);
-      }
+      console.log(error)
     }
   }
 
@@ -31,10 +28,10 @@ export function Register() {
     <>
       <div>register</div>
       <form onSubmit={submitHandler}>
-        <input type="text" placeholder="Name" value={username} onChange={(e) => setUsername(e.target.value)} />
-        <input type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        <input type="submit" />
+        <input type='text' placeholder='Name' value={username} onChange={(e) => setUsername(e.target.value)} />
+        <input type='text' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
+        <input type='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+        <input type='submit' />
     </form>
     </>
   )
